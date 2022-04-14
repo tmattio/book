@@ -27,9 +27,10 @@ doc: "https://ocamllabs.github.io/ocaml-ctypes/"
 bug-reports: "https://github.com/ocamllabs/ocaml-ctypes/issues"
 depends: [
   "dune" {>= "2.6"}
-  "ocaml" {>= "4.02.3"}
+  "ocaml" {>= "4.03.0"}
   "integers"
   "dune-configurator"
+  "bigarray-compat"
   "bisect_ppx" {>= "2.0.0"}
   "ounit" {with-test}
 ]

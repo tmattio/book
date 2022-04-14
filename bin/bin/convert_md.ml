@@ -241,9 +241,7 @@ let out_type =
 
 let main =
   let doc = "Pre-process markdown files to produce OCaml code." in
-  let exits = Term.default_exits in
-  Term.(const run $ file $ output $ out_type),
-  Term.info "output" ~doc ~exits
-  (* Term.(ret (const main $ Cli.setup)), *)
+  let exits = Cmd.Exit.defaults in
+  Cmd.v (Cmd.info "output" ~doc ~exits) Term.(const run $ file $ output $ out_type)
 
-let () = Term.(exit_status @@ eval main)
+let () = Stdlib.exit (Cmd.eval' main)

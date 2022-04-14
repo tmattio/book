@@ -18,12 +18,12 @@
  (description "Scripts and sources to compile the Real World OCaml
 second edition book. See https://realworldocaml.org/")
  (depends
-  (ocaml (and (>= 4.13.0) (< 4.14.0)))
+  (ocaml (>= 4.13.0))
   alcotest
   async
   atdgen
   base
-  cmdliner
+  (cmdliner (>= 1.1.0))
   cohttp-async
   conf-ncurses
   conf-tzdata
